@@ -24,4 +24,6 @@ int main() {
 
     delete q;
     delete p;
+
+    return 0;
 }
