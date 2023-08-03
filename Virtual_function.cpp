@@ -4,12 +4,12 @@ class Base {
     std::string s;
 
     public:
-        Base() : s("기반") {
+        Base() {
             std::cout << "기반 클래스" << std::endl;
         }
 
-        void what() {
-            std::cout << s << std::endl;
+        virtual void what() {
+            std::cout << "기반 클래스의 what()" << std::endl;
         }
 };
 
@@ -17,12 +17,12 @@ class Derived : public Base {
     std::string s;
 
     public:
-        Derived() : s("파생"), Base() {
+        Derived() : Base() {
             std::cout << "파생 클래스" << std::endl;
         }
         
         void what() {
-            std::cout << s << std::endl;
+            std::cout << "파생 클래스의 what()" << std::endl;
         }
 };
 
@@ -30,8 +30,13 @@ int main() {
     Base p;
     Derived c;
 
-    std::cout << "=== 포인터 버전 ===" << std::endl;
     Base* p_c = &c;
+    Base* p_p = &p;
+
+    std::cout << "=== 실제 객체는 Base ===" << std::endl;
+    p_p -> what(); 
+
+    std::cout << "=== 실제 객체는 Derived ===" << std::endl;
     p_c -> what();
 
     return 0;
@@ -41,6 +46,6 @@ int main() {
 //기반 클래스
 //파생 클래스
 //=== 실제 객체는 Base ===
-//
+//기반
 //=== 실제 객체는 Derived ===
-//
+//기반
