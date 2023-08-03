@@ -27,15 +27,12 @@ class Derived : public Base {
 };
 
 int main() {
-    std::cout << " === 기반 클래스 생성 === " << std::endl;
     Base p;
-
-    p.what();
-
-    std::cout << " === 파생 클래스 생성 === " << std::endl;
     Derived c;
 
-    c.what();
+    std::cout << "=== 포인터 버전 ===" << std::endl;
+    Base* p_c = &c;
+    p_c -> what();
 
     return 0;
 }
