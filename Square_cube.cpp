@@ -45,7 +45,6 @@ int Cube::getVolume(int side) {
 }
 
 int main() {
-
     int side;
 
     std::cout << "한 변의 길이 입력 : ";
