@@ -94,4 +94,5 @@ void UpAndDownGame::run() {
 
 int main() {
     UpAndDownGame::run();
+    return 0;
 }
