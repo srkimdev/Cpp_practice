@@ -90,7 +90,6 @@ int main() {
     Subtract sub;
 
     while(true) {
-
         std::cout << "1:(+), 2:(*), 3:(%), 4(-) 5:exit >> ";
         std::cin >> num;
         if (num == 5)
