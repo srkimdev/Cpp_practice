@@ -56,8 +56,8 @@ void Player::random() {
 }
 
 int main() {
-    std::cout << "***** 겜블링 게임을 시작합니다 *****" << std::endl;
     int ber;
+    std::cout << "***** 겜블링 게임을 시작합니다 *****" << std::endl;
     std::cout << "참여 인원 수를 입력해주세요 >> ";
     std::cin >> ber;
 
