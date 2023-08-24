@@ -7,7 +7,9 @@ class Dept {
     public:
         Dept(int size);
         Dept(Dept& dept);
-        ~Dept() {delete [] scores;}
+        ~Dept() {
+            delete [] scores;
+        }
         int getSize();
         void read();
         bool isOver60(int index);
@@ -20,7 +22,6 @@ Dept::Dept (int size) {
 
 void Dept::read() {
     int a;
-
     for(int i = 0; i < size; i++) {
         std::cout << i+1 << "]";
         std::cin >> a;
@@ -43,15 +44,13 @@ int countPass(Dept& c) {
     int sum = 0;
 
     for(int i = 0; i < c.getSize(); i++) {
-        if (c.isOver60(i) == true)
+        if (c.isOver60(i))
             sum++;
     }
-
     return sum;
 }
 
 int main() {
-    
     int cnt;
     std::cout << "학생 수를 입력하세요 >> ";
     std::cin >> cnt;
