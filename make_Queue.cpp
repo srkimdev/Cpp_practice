@@ -1,8 +1,8 @@
 #include <iostream>
 
 class BaseArray {
-    int capacity;
-    int *mem;
+    int capacity; //동적할당 원소 개수
+    int *mem; 
 
     protected:
         BaseArray(int capacity = 100) {
