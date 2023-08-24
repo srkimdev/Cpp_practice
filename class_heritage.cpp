@@ -49,7 +49,6 @@ class ColorPoint : public Point {
 };
 
 int main() {
-    
     std::cout << "zeroPoint 객체 출력" << std::endl;
     ColorPoint zeroPoint;
 
