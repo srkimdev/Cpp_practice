@@ -13,7 +13,7 @@ class Rectangle {
 };
 
 class Cuboid : public Rectangle {
-    int height;
+    int height; 
 
     public:
         Cuboid() : height(1) {};
@@ -22,8 +22,8 @@ class Cuboid : public Rectangle {
         int getVolume(int length, int width, int height);
 };
 
-int Rectangle::getPeri(int length, int width) {
-    return length *2 + width * 2;
+int Rectangle::getPeri(int length, int width) { 
+    return length *2 + width * 2; // 겉넓이
 }
 
 int Rectangle::getArea(int length, int width) {
